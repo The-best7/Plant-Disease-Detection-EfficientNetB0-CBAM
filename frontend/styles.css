@@ -1,0 +1,489 @@
+/* c:\Users\Kartik\Downloads\ntcc\plant-disease-app\frontend\styles.css */
+
+/* Global Reset & CSS Variables */
+:root {
+    --bg-dark: #07090e;
+    --bg-card: rgba(13, 17, 27, 0.7);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --text-primary: #f0f4f9;
+    --text-secondary: #8b9bb4;
+    
+    /* Branding Colors */
+    --color-success: #3fb950;
+    --color-success-rgb: 63, 185, 80;
+    --color-primary: #58a6ff;
+    --color-primary-rgb: 88, 166, 255;
+    --color-warning: #d29922;
+    --color-warning-rgb: 210, 153, 34;
+    --color-danger: #f85149;
+    --color-danger-rgb: 248, 81, 73;
+    --color-purple: #bc8cff;
+}
+
+body.dark-theme {
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Ambient Radial Glows in Background */
+.glow-bg-primary {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    left: -200px;
+    top: -100px;
+    background: radial-gradient(circle, rgba(63, 185, 80, 0.08) 0%, rgba(7, 9, 14, 0) 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.glow-bg-secondary {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    right: -100px;
+    top: 300px;
+    background: radial-gradient(circle, rgba(88, 166, 255, 0.06) 0%, rgba(7, 9, 14, 0) 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Typography Extensions */
+.fw-extrabold {
+    font-weight: 800;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, #3fb950 30%, #58a6ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-glow {
+    text-shadow: 0 0 40px rgba(63, 185, 80, 0.25);
+}
+
+.text-glow-success {
+    text-shadow: 0 0 15px rgba(63, 185, 80, 0.35);
+}
+
+.text-secondary-custom {
+    color: var(--text-secondary);
+}
+
+.fs-7 {
+    font-size: 0.875rem;
+}
+
+.fs-8 {
+    font-size: 0.75rem;
+}
+
+.fs-9 {
+    font-size: 0.65rem;
+}
+
+.uppercase {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1c2333;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2a354d;
+}
+
+/* Glassmorphism Styles */
+.glass-nav {
+    background: rgba(7, 9, 14, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.brand-text {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 1.6rem;
+    letter-spacing: -0.02em;
+    color: #fff;
+}
+
+.glass-card {
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.border-hover:hover {
+    border-color: rgba(63, 185, 80, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.border-light-custom {
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Icon Box & Badges */
+.icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-success-glow {
+    background: rgba(63, 185, 80, 0.1);
+}
+
+.bg-primary-glow {
+    background: rgba(88, 166, 255, 0.1);
+}
+
+.bg-warning-glow {
+    background: rgba(210, 153, 34, 0.15);
+}
+
+.bg-danger-glow {
+    background: rgba(248, 81, 73, 0.12);
+}
+
+.text-danger-custom {
+    color: #ff6b6b;
+}
+
+.btn-success-gradient {
+    background: linear-gradient(135deg, #2ea043 0%, #3fb950 100%);
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-success-gradient:hover {
+    background: linear-gradient(135deg, #3fb950 0%, #4fcf61 100%);
+    box-shadow: 0 0 20px rgba(63, 185, 80, 0.4);
+    color: #fff;
+}
+
+.btn-outline-custom {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+.shadow-glow {
+    box-shadow: 0 0 25px rgba(63, 185, 80, 0.25);
+}
+
+.shadow-glow-sm {
+    box-shadow: 0 0 15px rgba(63, 185, 80, 0.15);
+}
+
+/* Drag & Drop Upload Zone */
+.drag-drop-zone {
+    border: 2px dashed rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.02);
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.drag-drop-zone.dragover {
+    border-color: var(--color-success);
+    background: rgba(63, 185, 80, 0.04);
+}
+
+.drop-icon-container {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(63, 185, 80, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+}
+
+.drag-drop-zone:hover .drop-icon-container {
+    transform: scale(1.1);
+    background: rgba(63, 185, 80, 0.12);
+}
+
+/* Camera Stream Frame */
+.camera-stream-wrapper {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#webcam-stream {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.camera-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 10;
+    transition: opacity 0.3s ease;
+}
+
+/* Preview Image Frame */
+.preview-frame {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background-color: #0b0d13;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#image-preview {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Metric Display Boxes */
+.metric-box {
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Progress Ring (SVG) */
+.progress-ring-container {
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+.progress-ring {
+    transform: rotate(-90deg);
+}
+
+.progress-ring__circle {
+    transition: stroke-dashoffset 0.35s;
+    transform-origin: 50% 50%;
+    stroke-dasharray: 150.79;
+    stroke-dashoffset: 150.79;
+}
+
+.progress-ring__value {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Severity Indicator */
+.severity-indicator {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.severity-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px currentColor;
+    background-color: currentColor;
+}
+
+/* Grad-CAM Side-by-Side Images */
+.cam-box {
+    background: rgba(255, 255, 255, 0.015);
+    border-color: rgba(255, 255, 255, 0.06) !important;
+    transition: all 0.3s ease;
+}
+
+.cam-box img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 100%;
+    max-width: 256px;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Accordion Dark Customizations */
+.dark-accordion .accordion-item {
+    background-color: transparent;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dark-accordion .accordion-button {
+    background-color: transparent;
+    color: var(--text-primary);
+    font-weight: 600;
+    padding: 1.25rem 0.5rem;
+    box-shadow: none;
+}
+
+.dark-accordion .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: var(--color-success);
+}
+
+.dark-accordion .accordion-button::after {
+    filter: invert(1) grayscale(1);
+}
+
+.dark-accordion .accordion-body {
+    padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+}
+
+.list-bullet-custom {
+    padding-left: 1.2rem;
+    margin: 0;
+}
+
+.list-bullet-custom li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    list-style-type: square;
+}
+
+.list-bullet-custom li::marker {
+    color: var(--color-success);
+}
+
+/* History Logs Table */
+.dark-table {
+    --bs-table-bg: transparent;
+    --bs-table-border-color: rgba(255, 255, 255, 0.05);
+}
+
+.dark-table th {
+    color: var(--text-primary);
+    font-weight: 600;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.08) !important;
+    background: transparent !important;
+}
+
+.dark-table td {
+    color: var(--text-secondary);
+    background: transparent !important;
+}
+
+.history-thumb {
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Micro Animations */
+.animate-pulse {
+    animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.95; }
+    100% { transform: scale(1.05); opacity: 1; }
+}
+
+.animation-fade-in {
+    animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Print Styles for PDF Exporter */
+@media print {
+    body {
+        background-color: white !important;
+        color: black !important;
+    }
+    
+    .glass-nav, footer, #features-section, #analyzer-card, #btn-export-pdf, #history-section, .glow-bg-primary, .glow-bg-secondary {
+        display: none !important;
+    }
+    
+    .glass-card {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    #results-card, #heatmap-section, #treatment-section {
+        display: block !important;
+        page-break-inside: avoid;
+    }
+    
+    .text-glow, .text-glow-success {
+        text-shadow: none !important;
+    }
+    
+    .text-white {
+        color: black !important;
+    }
+    
+    .text-secondary-custom {
+        color: #555 !important;
+    }
+    
+    .metric-box, .cam-box {
+        border: 1px solid #ddd !important;
+        background: #f9f9f9 !important;
+        color: black !important;
+    }
+    
+    .btn {
+        display: none !important;
+    }
+    
+    .accordion-collapse {
+        display: block !important;
+        height: auto !important;
+    }
+    
+    .accordion-button::after {
+        display: none !important;
+    }
+}

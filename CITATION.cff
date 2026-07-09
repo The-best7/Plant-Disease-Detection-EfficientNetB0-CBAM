@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: "Deep Learning Based Plant Disease Detection using EfficientNet-B0 with CBAM and Explainable AI"
+message: "If you use this repository in your research, please cite it using the metadata below."
+type: software
+
+authors:
+  - family-names: "Tomar"
+    given-names: "Kartik"
+
+repository-code: "https://github.com/The-best7/Plant-Disease-Detection-EfficientNetB0-CBAM"
+
+license: MIT
+
+keywords:
+  - Plant Disease Detection
+  - Deep Learning
+  - EfficientNet-B0
+  - CBAM
+  - Grad-CAM
+  - Explainable AI
+  - PyTorch
