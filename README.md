@@ -142,7 +142,7 @@ The proposed model achieved a classification accuracy of \*\*99.89%\*\* on the N
 
 <p align="center">
 
-<img src="assets/screenshots/home\_page.png" width="900">
+<img src="assets/screenshots/home_page.png" width="900">
 
 </p>
 
@@ -154,7 +154,7 @@ The proposed model achieved a classification accuracy of \*\*99.89%\*\* on the N
 
 <p align="center">
 
-<img src="assets/screenshots/prediction\_result.png" width="900">
+<img src="assets/screenshots/prediction_result.png" width="900">
 
 </p>
 
@@ -166,7 +166,7 @@ The proposed model achieved a classification accuracy of \*\*99.89%\*\* on the N
 
 <p align="center">
 
-<img src="assets/screenshots/gradcam\_result.png" width="900">
+<img src="assets/screenshots/gradcam_result.png" width="900">
 
 </p>
 
@@ -218,7 +218,7 @@ The proposed system consists of a complete end-to-end pipeline, beginning with i
 
 <p align="center">
 
-&#x20; <img src="assets/architecture/system\_architecture.png" width="100%">
+&#x20; <img src="assets/architecture/system_architecture.png" width="100%">
 
 </p>
 
@@ -238,7 +238,7 @@ The proposed model enhances EfficientNet-B0 by integrating the Convolutional Blo
 
 <p align="center">
 
-&#x20; <img src="assets/architecture/model\_architecture.png" width="90%">
+&#x20; <img src="assets/architecture/model_architecture.png" width="90%">
 
 </p>
 
@@ -418,7 +418,7 @@ The proposed EfficientNet-B0 + CBAM model achieved the best overall performance 
 
 <p align="center">
 
-<img src="assets/results/cbam\_training.png" width="900">
+<img src="assets/results/cbam_training.png" width="900">
 
 </p>
 
@@ -434,7 +434,7 @@ The training and validation curves demonstrate stable convergence with minimal o
 
 <p align="center">
 
-<img src="assets/results/confusion\_matrix.png" width="700">
+<img src="assets/results/confusion_matrix.png" width="700">
 
 </p>
 
@@ -454,7 +454,7 @@ Grad-CAM++ is used to visualize the regions of the leaf image responsible for th
 
 <p align="center">
 
-<img src="assets/results/gradcam\_demo.png" width="900">
+<img src="assets/results/gradcam_demo.png" width="900">
 
 </p>
 
@@ -470,7 +470,7 @@ The heatmap confirms that the proposed model focuses primarily on infected leaf 
 
 <p align="center">
 
-<img src="assets/results/prediction\_gallery.png" width="900">
+<img src="assets/results/prediction_gallery.png" width="900">
 
 </p>
 
