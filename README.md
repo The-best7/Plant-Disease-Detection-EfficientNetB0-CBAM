@@ -1,6 +1,6 @@
 <p align="center">
 
-&#x20; <img src="assets/banner/github\_banner.png" alt="FloraeAI Banner" width="100%">
+&#x20; <img src="assets/banner/github_banner.png" alt="FloraeAI Banner" width="100%">
 
 </p>
 
@@ -391,18 +391,17 @@ The model was trained and evaluated using the \*\*New Plant Diseases Dataset (Au
 Three deep learning models were trained and evaluated on the New Plant Diseases Dataset to analyze the effectiveness of the proposed approach.
 
 
-
 | Model | Accuracy | Precision | Recall | F1-Score | Cohen Kappa | MCC |
+|-------|---------:|----------:|-------:|---------:|------------:|----:|
+| Custom CNN | 98.86% | 98.86% | 98.86% | 98.86% | 0.9883 | 0.9883 |
+| EfficientNet-B0 | 99.71% | 99.71% | 99.71% | 99.71% | 0.9970 | 0.9970 |
+| **EfficientNet-B0 + CBAM (Proposed)** | **99.89%** | **99.89%** | **99.89%** | **99.89%** | **0.9989** | **0.9989** |
 
-|--------|----------|-----------|--------|----------|-------------|-----|
-
-| Custom CNN | XX.XX% | XX.XX% | XX.XX% | XX.XX% | XXXX | XXXX |
-
-| EfficientNet-B0 | XX.XX% | XX.XX% | XX.XX% | XX.XX% | XXXX | XXXX |
-
-| EfficientNet-B0 + CBAM (Proposed) | XX.XX% | XX.XX% | XX.XX% | XX.XX% | XXXX | XXXX |
-
-
+| Model | Accuracy | Parameters | Training Time |
+|-------|---------:|-----------:|--------------:|
+| Custom CNN | 98.86% | 10,477,542 | 404.1 min |
+| EfficientNet-B0 | 99.71% | 4,804,514 | 40.6 min |
+| **EfficientNet-B0 + CBAM (Proposed)** | **99.89%** | **5,010,948** | **42.6 min** |
 
 The proposed EfficientNet-B0 + CBAM model achieved the best overall performance across all evaluation metrics.
 
